@@ -27,7 +27,8 @@ def verify(root: Path = HERE) -> list[str]:
     manifest = json.loads((root / "EXPORT_MANIFEST.json").read_text())
     listed = manifest["files"]
     present = {p.relative_to(root).as_posix() for p in root.rglob("*")
-               if p.is_file() and not (set(p.relative_to(root).parts) & IGNORED_DIRS)}
+               if p.is_file() and p.relative_to(root).parts[0] != ".git"
+               and not (set(p.relative_to(root).parts) & IGNORED_DIRS)}
     problems = []
     for rel in sorted(set(listed) - present):
         problems.append(f"missing: {rel}")

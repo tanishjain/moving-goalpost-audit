@@ -54,3 +54,24 @@ def test_manifest_records_explicit_provenance_for_every_file():
     adapted = {rel for rel, rec in man["files"].items() if rec["provenance"] == "adapted"}
     assert adapted == {"code/scripts/validation/build_error_cascade.py"}
     assert man["files"]["code/scripts/validation/g5_run_ablation.py"]["provenance"] == "extracted"
+
+
+
+@pytest.mark.parametrize("kind", ["directory", "file"])
+def test_root_git_metadata_is_not_snapshot_content(tmp_path, kind):
+    (tmp_path / "EXPORT_MANIFEST.json").write_text(json.dumps({"files": {}}))
+    git = tmp_path / ".git"
+    if kind == "directory":
+        git.mkdir()
+        (git / "HEAD").write_text("ref: refs/heads/main\n")
+    else:
+        git.write_text("gitdir: ../administrative-directory\n")
+    assert vs.verify(tmp_path) == []
+
+
+def test_nested_git_content_is_still_unlisted(tmp_path):
+    (tmp_path / "EXPORT_MANIFEST.json").write_text(json.dumps({"files": {}}))
+    nested = tmp_path / "data" / ".git"
+    nested.mkdir(parents=True)
+    (nested / "extra").write_text("unexpected snapshot content")
+    assert "unlisted file: data/.git/extra" in vs.verify(tmp_path)

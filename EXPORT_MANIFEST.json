@@ -24,7 +24,7 @@
       "bytes": 24392,
       "note": "source-to-export hash map",
       "provenance": "generated",
-      "sha256": "b6363b7842ba6eb58c40ecaa32b37cd5dd122994d59f2d4e486ee262bee4bf94"
+      "sha256": "243ce056c8082256de02d48bce60f7bd8728f3bfb681033a81a4b52ecc846fc7"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 1741,
@@ -735,9 +735,9 @@
       "sha256": "41ef60e4118a5ad021e4ca136b7228512b8a1a0754ef7d6a55c028b2b8327c2f"
     },
     "tests/test_integrity.py": {
-      "bytes": 2452,
+      "bytes": 3244,
       "provenance": "new",
-      "sha256": "e63f854f9bec37f00bcf31552fcdbef420b596d55dfc237410b378941d89aafb"
+      "sha256": "a1b28e73baf7e305533fff8f71e0ade0c14609786704f66529b231a2631deb6f"
     },
     "tests/test_inventory_and_privacy.py": {
       "bytes": 4183,
@@ -760,9 +760,9 @@
       "sha256": "fe5df059e562ec6acc1edf738c3f2145ce427d59392e12314ca1fad1257d0c7f"
     },
     "verify_snapshot.py": {
-      "bytes": 1905,
+      "bytes": 1963,
       "provenance": "new",
-      "sha256": "0247b54354549c3f2f05281a97983bca31b6b437192681864b058d95fb4016cd"
+      "sha256": "1dce4b6f522e5b72b7ab22e335217adc9de2f659359309aecdb0aa12d9464733"
     }
   },
   "scientific_identity": {
