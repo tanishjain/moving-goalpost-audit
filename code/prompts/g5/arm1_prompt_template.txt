@@ -1,0 +1,37 @@
+# Frozen G5 Arm-1 prompt template, rendered by g5_run_ablation.render_prompt with every case field
+# replaced by its {placeholder}. No case text is included. Case fields: nct_id, trial_title, registered_endpoint_measures, registered_endpoint_descriptions, registered_endpoint_timeframes, pub_title, abstract.
+You are assessing whether a clinical trial's published report describes the same primary outcome that was registered for the trial. Use only the supplied case fields. Do not infer facts from outside the supplied title, abstract, and registry text. Return only the JSON object required by the response schema, with no additional text.
+
+Step 1 - Publication identity. Decide whether the publication is the trial's PRIMARY-RESULTS report: the report intended to present the trial's prespecified primary endpoint at its prespecified analysis or time point. Choose one:
+- RIGHT_PAPER - this is the primary-results report of this trial.
+- WRONG_PAPER - this is a secondary/subgroup analysis, a biomarker or ancillary sub-study, a long-term follow-up or extension that is ancillary to an identifiable earlier primary-results report, a pooled/meta-analysis, a review, a protocol, or a report of a different trial.
+- UNASSESSABLE - the supplied publication title and abstract do not contain enough information to decide.
+A report labelled "follow-up" can still be the primary-results report if it is the first mature report of the prespecified primary endpoint. Choose WRONG_PAPER for a follow-up/extension only when it is ancillary to an identifiable earlier primary-results report or does not report the prespecified primary analysis. Do not choose WRONG_PAPER merely because the registered and published outcome wording differs; endpoint disagreement is assessed in Step 2.
+If Step 1 is not RIGHT_PAPER, stop: set all Step-2 fields to null and do not perform the outcome comparison. If Step 1 is RIGHT_PAPER, perform the Gate-D block below.
+
+Primary-outcome equivalence. Compare the latest registered primary outcome or outcomes shown in the case with the primary outcome or outcomes that the publication abstract explicitly designates. This is a latest-registry-record-versus-publication comparison; no prospective registry version is supplied or inferred.
+First locate what the abstract designates as primary. If the abstract reports outcomes but does not designate a primary outcome, set endpoint_locatable = false, set the element and structure fields to null, and set gate_d = UNASSESSABLE; do not infer a primary outcome from salience or order. Otherwise set endpoint_locatable = true and code every element as SAME, COMPATIBLE, DIFFERENT, UNASSESSABLE, or NOT_APPLICABLE:
+- domain - the clinical construct being measured.
+- measurement - the specific measurement variable or instrument.
+- metric - the participant-level analysis metric, such as change from baseline, time-to-event, or proportion responding.
+- aggregation - the method of aggregation, including any cutoff or composite definition.
+- timepoint - the assessment time point or window.
+Use SAME for substantively identical content, COMPATIBLE for non-conflicting expressions of the same outcome, DIFFERENT for a substantive conflict, UNASSESSABLE when needed information is absent or ambiguous, and NOT_APPLICABLE only when that element genuinely does not apply. Related outcomes are not automatically compatible. For example, time-to-progression and progression-free survival differ if death counts as an event; code the affected element DIFFERENT. Pure wording, abbreviation, or synonym differences are not material when every applicable element is SAME or COMPATIBLE.
+Also code:
+- priority_change: NONE, CHANGED, or UNASSESSABLE.
+- addition_or_omission: NONE, ADDITION, OMISSION, BOTH, or UNASSESSABLE.
+- multiplicity_mapping: NONE, ONE_TO_MANY, MANY_TO_ONE, COMPLEX, or UNASSESSABLE.
+Set gate_d = MATERIAL_CHANGE if at least one element is DIFFERENT, priority is CHANGED, addition/omission is ADDITION, OMISSION, or BOTH, or multiplicity mapping is ONE_TO_MANY, MANY_TO_ONE, or COMPLEX. If none of those positive conditions is present but at least one required field is UNASSESSABLE, set gate_d = UNASSESSABLE. Otherwise set gate_d = NO_MATERIAL_CHANGE. The deterministic collapse is binding; do not give a gate_d value that contradicts the element and structure fields.
+
+--- CASE (case_id={case_id}, arm=1) ---
+nct_id: {nct_id}
+trial_title: {trial_title}
+registered_primary_outcome_measure: {registered_endpoint_measures}
+registered_primary_outcome_description: {registered_endpoint_descriptions}
+registered_primary_outcome_timeframe: {registered_endpoint_timeframes}
+publication_title: {pub_title}
+publication_abstract: {abstract}
+
+Return ONLY this JSON object (no code fences):
+{"case_id": <int>, "arm": 1, "gate_a": "RIGHT_PAPER|WRONG_PAPER|UNASSESSABLE", "endpoint_locatable": <true|false|null>, "elements": {"domain": <code|null>, "measurement": <code|null>, "metric": <code|null>, "aggregation": <code|null>, "timepoint": <code|null>}, "priority_change": <code|null>, "addition_or_omission": <code|null>, "multiplicity_mapping": <code|null>, "gate_d": <"MATERIAL_CHANGE|NO_MATERIAL_CHANGE|UNASSESSABLE"|null>, "brief_rationale": "<=280 chars"}
+If gate_a != RIGHT_PAPER set endpoint_locatable, all elements, structure fields, and gate_d to null.

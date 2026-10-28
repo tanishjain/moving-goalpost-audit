@@ -1,0 +1,4 @@
+model,gate_a_n_human_eligible,gate_a_n_model_determinate,gate_a_coverage,gate_a_raw_agreement,gate_a_kappa,cond_gate_d_n_eligible_arm1,cond_gate_d_correctness_arm1,false_reject_sensitivity_arm1
+claude-opus-4.6,92,92,1.0,0.9891304347826086,0.978240302743614,33,0.8484848484848485,0.6222222222222222
+gemini-3.1-pro-preview,92,92,1.0,0.9891304347826086,0.978240302743614,30,0.5,0.3333333333333333
+gpt-5.4,92,70,0.7608695652173914,1.0,1.0,13,0.38461538461538464,0.1111111111111111

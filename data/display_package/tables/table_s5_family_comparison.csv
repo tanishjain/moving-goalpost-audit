@@ -1,0 +1,13 @@
+Analysis family,Date boundary,Denominator,Gate-A pass,Nested A and B pass,Nested raw C pass,Nested substantive C pass,Terminal raw / substantive
+Frozen baseline,Primary boundary,All 97,45,30,13,16,2 / 2
+Frozen baseline,Primary boundary,83 P4-positive,32,17,7,8,2 / 2
+Frozen baseline,"Permissive, substantive lower",All 97,45,30,16,19,2 / 2
+Frozen baseline,"Permissive, substantive lower",83 P4-positive,32,17,8,9,2 / 2
+Frozen baseline,"Permissive, substantive upper",All 97,45,30,16,20,2 / 2
+Frozen baseline,"Permissive, substantive upper",83 P4-positive,32,17,8,10,2 / 2
+Author-approved post-audit,Primary boundary,All 97,45,30,13,14,2 / 2
+Author-approved post-audit,Primary boundary,83 P4-positive,32,17,7,8,2 / 2
+Author-approved post-audit,"Permissive, substantive lower",All 97,45,30,16,17,2 / 2
+Author-approved post-audit,"Permissive, substantive lower",83 P4-positive,32,17,8,9,2 / 2
+Author-approved post-audit,"Permissive, substantive upper",All 97,45,30,16,18,2 / 2
+Author-approved post-audit,"Permissive, substantive upper",83 P4-positive,32,17,8,10,2 / 2

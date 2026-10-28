@@ -1,0 +1,7 @@
+**Table 2. Diagnostic performance of the frozen screen (unweighted, exact Clopper-Pearson intervals; primary).**
+
+| Estimand / subgroup | TP | FP | FN | TN | Precision % (95% CI) | Recall % (95% CI) | Specificity % (95% CI) | NPV % (95% CI) | Accuracy % (95% CI) | F1 | Kappa |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| P4 (stage-4 screen), all 97 | 6 | 77 | 1 | 13 | 7.2 (2.7-15.1) | 85.7 (42.1-99.6) | 14.4 (7.9-23.4) | 92.9 (66.1-99.8) | 19.6 (12.2-28.9) | 0.133 | 0.0003 |
+| P5 (stage-5 classification), all 97 | 6 | 74 | 1 | 16 | 7.5 (2.8-15.6) | 85.7 (42.1-99.6) | 17.8 (10.5-27.3) | 94.1 (71.3-99.9) | 22.7 (14.8-32.3) | 0.138 | 0.0060 |
+| P4, both reviewers accepted publication match | 5 | 26 | 1 | 12 | 16.1 (5.5-33.7) | 83.3 (35.9-99.6) | 31.6 (17.5-48.7) | 92.3 (64.0-99.8) | 38.6 (24.4-54.5) | 0.270 | 0.0541 |

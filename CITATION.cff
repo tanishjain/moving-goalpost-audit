@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it."
+title: "Publication identity and abstract availability constrained an automated registry-to-publication outcome audit: code and source-text-free derived data"
+type: software
+authors:
+  - family-names: Jain
+    given-names: Tanish
+    orcid: "https://orcid.org/0000-0002-0571-4948"
+  - family-names: Casamento
+    given-names: Alessandra
+    orcid: "https://orcid.org/0000-0001-6156-9020"
+    affiliation: "Independent Researcher, London, UK"
+version: 1.0.0
+date-released: 2026-10-27
+doi: 10.5281/zenodo.23693399
+repository-code: "https://github.com/tanishjain/moving-goalpost-audit"
+url: "https://doi.org/10.5281/zenodo.23693399"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - clinical trial registration
+  - registry-to-publication
+  - outcome reporting
+  - error cascade
+  - large language model evaluation

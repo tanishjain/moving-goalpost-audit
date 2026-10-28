@@ -1,0 +1,4 @@
+model,n_paired,arm1_correct,arm2_correct,arm1_correctness,arm2_correctness,paired_diff_arm1_minus_arm2,diff_ci95_lo,diff_ci95_hi,improved,regressed,unchanged
+claude-opus-4.6,97,80,29,0.8247,0.299,0.5258,0.4124,0.6289,53,2,42
+gemini-3.1-pro-preview,97,68,17,0.701,0.1753,0.5258,0.4227,0.6289,52,1,44
+gpt-5.4,97,55,7,0.567,0.0722,0.4948,0.3918,0.5979,50,2,45

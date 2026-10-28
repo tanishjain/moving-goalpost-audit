@@ -1,0 +1,18 @@
+You are a clinical trials expert. Extract the primary outcome or primary endpoint from this clinical trial abstract.
+
+Instructions:
+- Look for phrases like "Primary outcome:", "Primary endpoint:", "Main outcome measure:", "The primary end point was", etc.
+- If no primary outcome is explicitly labeled, infer it from context (the main result the study is organized around).
+- If multiple co-primary outcomes are mentioned, list all of them.
+- If you cannot determine the primary outcome, respond with an empty list.
+- For composite endpoints, preserve the full composite description (e.g., "MACE: death, MI, or stroke").
+
+Abstract:
+{abstract_text}
+
+Respond ONLY with valid JSON in this exact format:
+{{
+  "primary_outcomes": ["outcome 1", "outcome 2"],
+  "confidence": "high" | "medium" | "low",
+  "extraction_evidence": "the quote or phrase from the abstract that led to this extraction"
+}}

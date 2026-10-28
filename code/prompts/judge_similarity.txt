@@ -1,0 +1,35 @@
+You are a clinical trials methodology expert evaluating whether a published trial endpoint matches what was originally registered.
+
+Compare the REGISTERED endpoint (from ClinicalTrials.gov, recorded before the trial started) with the PUBLISHED endpoint (from the peer-reviewed paper reporting results).
+
+REGISTERED ENDPOINT:
+{registered_endpoint}
+
+REGISTERED TIMEFRAME:
+{registered_timeframe}
+
+PUBLISHED ENDPOINT:
+{published_endpoint}
+
+Consider:
+1. Are they measuring the same clinical concept (e.g., both about survival, both about tumor response)?
+2. Is the measurement method the same (e.g., both use RECIST criteria, both use patient-reported scales)?
+3. Is the timeframe the same?
+4. If one is a composite, are the components the same?
+
+Rate the similarity on a 1-5 scale:
+- 5: Identical or trivially different wording for the same measure
+- 4: Same core concept, minor differences in phrasing or operationalization
+- 3: Related concept but meaningfully different scope or measurement
+- 2: Different concept within the same clinical domain
+- 1: Completely different outcomes
+
+Respond ONLY with valid JSON:
+{{
+  "similarity_score": 1-5,
+  "same_concept": true | false,
+  "same_measurement": true | false,
+  "same_timeframe": true | false,
+  "key_differences": ["list specific differences, or empty list if none"],
+  "explanation": "brief explanation of your rating"
+}}

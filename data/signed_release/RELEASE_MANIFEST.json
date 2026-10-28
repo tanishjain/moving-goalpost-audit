@@ -1,0 +1,117 @@
+{
+  "release": "moving-goalpost error-cascade diagnostic \u2014 citable benchmark (pre-publication)",
+  "built": "deterministic (no timestamp)",
+  "publish_status": "UNPUBLISHED \u2014 curated package; no tag, deposit, or DOI assigned",
+  "immutable_source_sha256": {
+    "error_cascade.csv": "c709813d3d38218cf750d190cc5ff78bf21a4877787958d86cfc98a8865cd3dd",
+    "gate_c_registry_timing.csv": "5002226b059f46449ca8fa949d446ba6ff11cad458e166fbcd07efff54f4a5b5",
+    "g5_run_completion.json": "b94f8d28e7bd93cd2bc2ef3eee00c7defbe7ad0c361e393acaeab80831c1becf",
+    "g5_run_manifest.json": "22f1666781791c713cdc3576e31c86fa4dd2d17c57c4abc16292e0618de8b00d",
+    "g5_analysis.json": "1e53685eb1ede80617cc6845d7909315d432d191bcfb14bef8eb155a981fabd7",
+    "g5_attempts.jsonl": "f832e1272d038798682e4369f625d81127a2e87c90ca457c92d4d95cd6dcf9b1",
+    "g5_reference_extract.csv": "c393416f2f9cfa6e5d0f162be45de38a682ffe93319cfc3e8fd1db8cf93349b2",
+    "g2_sampling_probabilities.csv": "c4ddb57a763b73fbbacf2816943190bd8d1fe392927b5fc4522a34ee8c4ac3f8",
+    "approved_cascade_labels (derived)": "cc4ccb5bb369beb883c71f4824fb8e774d923e02cd9e8b989741dcb797bfa6e0",
+    "g5_presentation_r2_results_manifest.json": "45ba78b3e6d1ee28a35f2c1c75cbba5357085b2b1a3425ecdc6a11b8a7d300b1"
+  },
+  "release_artifact_sha256": {
+    "CITATION.cff": "afddb89fd1b23cae9f470fa621be0ecb84bfcdf045399e5cf04e92d70965e1b1",
+    "LICENSE.md": "0afc12f5d8fd04881e597171be2d1594a7b30a714f0d143a9c66ddeb3d0aac62",
+    "README.md": "1a2307b2c11d674b14e1f9d7b81bc9da3bcc1984ed1be57cd2e000350bc5aad4",
+    "REPRODUCE.md": "26e38f5971cb6d216baed80508d576186265e770c52c9f913dae53332687a5dc",
+    "THIRD_PARTY_NOTICES.md": "707f94fb3586dfb754122664ca3c00f6b4b40a915fe60330e19d311bb50bb8be",
+    "benchmark/SCHEMA.md": "7d496ae635b6c2193759ce71ee11f01e71b50e6905b0665a338c1888d4d99cbc",
+    "benchmark/cascade_labels.csv": "cc4ccb5bb369beb883c71f4824fb8e774d923e02cd9e8b989741dcb797bfa6e0",
+    "benchmark/g5_cells_source_text_free.csv": "f764862e153884c713fd94b23fc84e0819464b1883e4c15b18d97109699571b0",
+    "benchmark/g5_gate_a_and_conditional_d.csv": "a77bf200eed5d5397edf12967a7675cca0bd26e535d7cd3523580294e2441f70",
+    "benchmark/g5_mechanism_by_human_gate_a.csv": "3b49fc361bea761426725d4e80bfc6392622225f13a97319e31a55dd625fa7c5",
+    "benchmark/g5_primary_effects.csv": "838f745743eae7c7c2b0717d12fcb71f027ecf0bf6c530296b8d36587007bfec",
+    "benchmark/g5_status_coverage.csv": "256fb8b586821738d3ed8c156cb2fa528a625788090d161f357715d0b7f34851",
+    "benchmark/g5_wrong_paper_arm2_responses.csv": "66f99312de8e5ba3a380facffc9a9dda3cada08cac12100404d1a149f90a243a",
+    "benchmark/gate_c_registry_timing_codes.csv": "a9630353a2b7ea446c51f18c089882156d36b403ceb7855a526614be9448b8a3",
+    "benchmark/sampling_weights_observed.csv": "54ce1b1dbe0ff702ef4878e96fad5648cd8d56da1dd892b0cef99e82a62a1c3d",
+    "cascade_denominators.csv": "3519794ad8846269eb5d8d003eb6651c647d925bea15c6f62cf3cb4ccad67e61",
+    "verify_release.py": "b489fdc705fc1b052d75c8488002a6f18bc2fe0501b4acbab62573a664a571b1"
+  },
+  "denominator_families": {
+    "all_97": {
+      "start": 97,
+      "gate_a_pass": 45,
+      "gate_b_pass": 30,
+      "gate_c_pass_raw": 13,
+      "gate_c_pass_substantive": 14,
+      "target_material": 2
+    },
+    "p4_nested_83": {
+      "start": 83,
+      "gate_a_pass": 32,
+      "gate_b_pass": 17,
+      "gate_c_pass_raw": 7,
+      "gate_c_pass_substantive": 8,
+      "target_material": 2
+    }
+  },
+  "excluded_from_export": [
+    "abstracts",
+    "registry/publication free text",
+    "raw prompts/responses",
+    "provider request/response IDs",
+    "hidden audit answers",
+    "contaminated pilots"
+  ],
+  "analysis_family": "author_approved_post_audit",
+  "family_version": "1.0.0",
+  "family_description": "frozen author-coded cascade with four author-approved post-audit revisions; frozen baseline denominators retained in history",
+  "approved_family_inputs_sha256": {
+    "overlay proposal": "53c54e7c629f050cbfb2015c1daa8934e4902ad8d6fb7256406ffbda62d3ee2a",
+    "author approval record": "b91d644f1a724814b199b88a42a553931c0c7d0edd17f4c43e42fd713d9e8a2b",
+    "reviewed candidate build": "dc1af8661ef73478",
+    "approved analysis payload": "bc5685c668f39376993fc6de57bb13db7fa10b288db28f926106701d02bea3a8",
+    "source flow": "b931bb616cdbb65d54c366f252240c49f0ec172f80bd1e48ec78d20825ad7eb5"
+  },
+  "builder_code_sha256": {
+    "analysis_families.py": "16811526bc93d1f9f903ebde10ba58efcde6ed5b8466e9148ef349f158b7950a",
+    "g3_post_review_overlay.py": "b0100bc0d0ed17d31251d63e8fa25e1793728cbe4644db95bc17f1e2601cdee6",
+    "g3_final_package.py": "57608838718af69e06918fe68d2e1e54172162f6e8af97d72cd65ec47fcdc327",
+    "source_flow.py": "9750169a74f1210f32267c1ed836cafe34caee6d8ce754c1a0f38844008ee2f7",
+    "build_display_package.py": "6bb84809974f998f3f37280193614571b55a5dc5e4dfbb727fee12baea292043",
+    "build_public_release.py": "ad652d04ab6cdcfb90993e0c973f999cdc5084d6efc0ae2e4c0666e079f4fca7",
+    "audit_public_release.py": "d327385bdb1244ce73d7c025f44cfd1dea6e6daeb8c888384f8e2298bcd6812f",
+    "g5_build_release.py": "12622f9789ad131cba7eb8eb45170b35aa95255c4046c3a3f11b1ff7d372c9e7"
+  },
+  "historical_frozen_denominator_families": {
+    "all_97": {
+      "start": 97,
+      "gate_a_pass": 45,
+      "gate_b_pass": 30,
+      "gate_c_pass_raw": 13,
+      "gate_c_pass_substantive": 16,
+      "target_material": 2
+    },
+    "p4_nested_83": {
+      "start": 83,
+      "gate_a_pass": 32,
+      "gate_b_pass": 17,
+      "gate_c_pass_raw": 7,
+      "gate_c_pass_substantive": 8,
+      "target_material": 2
+    }
+  },
+  "presentation_revision": {
+    "presentation_revision": "presentation-r2",
+    "date": "2026-10-04",
+    "analysis_family": "author_approved_post_audit",
+    "family_version": "1.0.0",
+    "supersedes_approved_run_id": "2f7a8fcfb09e392a",
+    "supersedes_package_manifest_sha256": "b25e60a5429a3fcb87529e1748467ad3492805fb463482aae785470360a67c73",
+    "changes": [
+      "Supplementary Table S4B added (Arm-2 responses among the 47 human-reference wrong-paper cases); the existing status/coverage table is relabelled S4A with unchanged values",
+      "G5 explanatory captions use the empirical wrong-paper finding (G5 presentation revision r2)",
+      "S5B approved-family column/caption labels",
+      "public-safe aggregate benchmark/g5_wrong_paper_arm2_responses.csv added to the release"
+    ],
+    "values_changed": false,
+    "new_human_coding_approval": false,
+    "g5_presentation": "data/validation/g5/g5_release_presentation_r2"
+  }
+}

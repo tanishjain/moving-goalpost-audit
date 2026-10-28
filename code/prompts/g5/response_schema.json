@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "addition_or_omission": {
+      "enum": [
+        "NONE",
+        "ADDITION",
+        "OMISSION",
+        "BOTH",
+        "UNASSESSABLE",
+        null
+      ]
+    },
+    "arm": {
+      "enum": [
+        1,
+        2
+      ],
+      "type": "integer"
+    },
+    "brief_rationale": {
+      "maxLength": 280,
+      "type": "string"
+    },
+    "case_id": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "elements": {
+      "additionalProperties": false,
+      "properties": {
+        "aggregation": {
+          "enum": [
+            "SAME",
+            "COMPATIBLE",
+            "DIFFERENT",
+            "UNASSESSABLE",
+            "NOT_APPLICABLE",
+            null
+          ]
+        },
+        "domain": {
+          "enum": [
+            "SAME",
+            "COMPATIBLE",
+            "DIFFERENT",
+            "UNASSESSABLE",
+            "NOT_APPLICABLE",
+            null
+          ]
+        },
+        "measurement": {
+          "enum": [
+            "SAME",
+            "COMPATIBLE",
+            "DIFFERENT",
+            "UNASSESSABLE",
+            "NOT_APPLICABLE",
+            null
+          ]
+        },
+        "metric": {
+          "enum": [
+            "SAME",
+            "COMPATIBLE",
+            "DIFFERENT",
+            "UNASSESSABLE",
+            "NOT_APPLICABLE",
+            null
+          ]
+        },
+        "timepoint": {
+          "enum": [
+            "SAME",
+            "COMPATIBLE",
+            "DIFFERENT",
+            "UNASSESSABLE",
+            "NOT_APPLICABLE",
+            null
+          ]
+        }
+      },
+      "required": [
+        "domain",
+        "measurement",
+        "metric",
+        "aggregation",
+        "timepoint"
+      ],
+      "type": "object"
+    },
+    "endpoint_locatable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "gate_a": {
+      "enum": [
+        "RIGHT_PAPER",
+        "WRONG_PAPER",
+        "UNASSESSABLE",
+        null
+      ]
+    },
+    "gate_d": {
+      "enum": [
+        "MATERIAL_CHANGE",
+        "NO_MATERIAL_CHANGE",
+        "UNASSESSABLE",
+        null
+      ]
+    },
+    "multiplicity_mapping": {
+      "enum": [
+        "NONE",
+        "ONE_TO_MANY",
+        "MANY_TO_ONE",
+        "COMPLEX",
+        "UNASSESSABLE",
+        null
+      ]
+    },
+    "priority_change": {
+      "enum": [
+        "NONE",
+        "CHANGED",
+        "UNASSESSABLE",
+        null
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "arm",
+    "gate_a",
+    "endpoint_locatable",
+    "elements",
+    "priority_change",
+    "addition_or_omission",
+    "multiplicity_mapping",
+    "gate_d",
+    "brief_rationale"
+  ],
+  "type": "object"
+}

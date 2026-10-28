@@ -1,0 +1,29 @@
+[project]
+name = "moving-goalpost-public-snapshot"
+version = "1.0.0"
+description = "Code and source-text-free derived data for an error-cascade evaluation of automated registry-to-publication outcome auditing"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Tanish Jain" }, { name = "Alessandra Casamento" }]
+# Minimal dependencies for integrity verification, analysis reproduction and the offline tests.
+# Exact tested versions: requirements-lock.txt. The pipeline in code/src/ declares further optional services.
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "jsonschema>=4.0",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.urls]
+Repository = "https://github.com/tanishjain/moving-goalpost-audit"
+Archive = "https://doi.org/10.5281/zenodo.23693399"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

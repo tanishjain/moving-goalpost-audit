@@ -1,0 +1,4 @@
+model,human_reference_gate_a,arm,n_cases,valid_material_change,valid_no_material_change,valid_unassessable,invalid,invalid_schema_fail,invalid_semantic_fail,invalid_transport_fail
+claude-opus-4.6,WRONG_PAPER,2,47,6,1,40,0,0,0,0
+gemini-3.1-pro-preview,WRONG_PAPER,2,47,6,1,39,1,1,0,0
+gpt-5.4,WRONG_PAPER,2,47,4,0,36,7,4,3,0

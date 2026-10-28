@@ -1,0 +1,30 @@
+You are a clinical trials methodology expert. A discrepancy has been detected between a trial's registered and published primary endpoints. Classify the type of discrepancy.
+
+REGISTERED PRIMARY ENDPOINT(S) (from ClinicalTrials.gov):
+{registered_endpoints}
+
+REGISTERED TIMEFRAME:
+{registered_timeframe}
+
+PUBLISHED PRIMARY ENDPOINT(S) (from paper):
+{published_endpoints}
+
+Classify this discrepancy into ONE of the following categories:
+
+1. CONSISTENT — The endpoints are the same; no real discrepancy (false alarm).
+2. MODIFIED — The core concept changed meaningfully (e.g., "overall survival" to "progression-free survival", or a different scale/instrument).
+3. TIMEFRAME_CHANGE — Same measure but different assessment window (e.g., "12 months" to "24 months").
+4. COMPOSITE_SUBSET — A registered composite was broken apart, or only some components were reported (e.g., "MACE" to "cardiovascular death only").
+5. UNREPORTED_IN_ABSTRACT — The registered primary endpoint is not mentioned in the abstract at all. NOTE: This does NOT necessarily mean it was dropped from the study — it may appear in the full paper.
+6. ADDED — The publication reports a primary endpoint that was NOT registered. This could indicate that a secondary outcome was promoted.
+7. MULTIPLE_CHANGES — More than one type of change occurred simultaneously.
+
+Respond ONLY with valid JSON:
+{{
+  "classification": "CONSISTENT | MODIFIED | TIMEFRAME_CHANGE | COMPOSITE_SUBSET | UNREPORTED_IN_ABSTRACT | ADDED | MULTIPLE_CHANGES",
+  "confidence": 1-5,
+  "explanation": "brief explanation of your classification",
+  "registered_summary": "one-line summary of what was registered",
+  "published_summary": "one-line summary of what was published",
+  "specific_changes": ["list each specific change detected"]
+}}

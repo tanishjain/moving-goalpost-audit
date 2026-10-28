@@ -1,0 +1,11 @@
+Gate,Comparison,Exact agreement
+B,All audited cases,18/20
+B,Original author category PASS,8/8
+B,Original author category FAIL,3/4
+B,Original author category NO_PRIMARY_IN_ABSTRACT,7/8
+C,All audited cases,12/15
+C,Five cases changed in the pre-return review,5/5
+C,Remaining ten cases,7/10
+C,Original author category SUBSTANTIVE_CHANGE,8/8
+C,Original author category WORDING_ONLY,4/7
+D,Collapsed element-material flag (descriptive),13/15

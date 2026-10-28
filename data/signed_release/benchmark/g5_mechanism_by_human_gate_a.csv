@@ -1,0 +1,10 @@
+model,human_reference_gate_a,n_cases,arm1_correct,arm2_correct,arm1_correctness,arm2_correctness,diff_arm1_minus_arm2
+claude-opus-4.6,RIGHT_PAPER,45,28,27,0.6222,0.6,0.0222
+claude-opus-4.6,WRONG_PAPER,47,47,1,1.0,0.0213,0.9787
+claude-opus-4.6,UNASSESSABLE,5,5,1,1.0,0.2,0.8
+gemini-3.1-pro-preview,RIGHT_PAPER,45,16,15,0.3556,0.3333,0.0222
+gemini-3.1-pro-preview,WRONG_PAPER,47,47,1,1.0,0.0213,0.9787
+gemini-3.1-pro-preview,UNASSESSABLE,5,5,1,1.0,0.2,0.8
+gpt-5.4,RIGHT_PAPER,45,5,6,0.1111,0.1333,-0.0222
+gpt-5.4,WRONG_PAPER,47,45,0,0.9574,0.0,0.9574
+gpt-5.4,UNASSESSABLE,5,5,1,1.0,0.2,0.8

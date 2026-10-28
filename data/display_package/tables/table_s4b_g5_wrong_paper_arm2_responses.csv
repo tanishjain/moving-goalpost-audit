@@ -1,0 +1,4 @@
+Model identifier,Valid: material change,Valid: no material change,Valid: unassessable,Invalid,Total
+claude-opus-4.6,6,1,40,0,47
+gemini-3.1-pro-preview,6,1,39,1,47
+gpt-5.4,4,0,36,7,47

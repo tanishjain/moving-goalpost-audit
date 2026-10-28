@@ -1,0 +1,58 @@
+{
+  "description": "Approved manuscript values used as reproduction targets. Each value is transcribed from the manuscript claims ledger (internal control document, 26 October 2026 state) and the approved public aggregate named in its source. Dashes and minus signs are normalized to ASCII hyphen-minus; percentages are one-decimal display values. These are targets for comparison only; no analysis reads them as inputs.",
+  "scientific_family": "author_approved_post_audit v1.0.0",
+  "scientific_run": "2f7a8fcfb09e392a",
+  "presentation_run": "ff8e426d9e7267cc",
+  "values": {
+    "P4": {"TP": 6, "FP": 77, "FN": 1, "TN": 13, "precision": "7.2 (2.7-15.1)", "recall": "85.7 (42.1-99.6)"},
+    "P5": {"flags": 80, "TP": 6, "precision": "7.5 (2.8-15.6)"},
+    "right_paper": {"n": 44, "P4_positive": 31, "TP": 5, "precision": "16.1 (5.5-33.7)"},
+    "reference": {"positive": 7, "negative": 90},
+    "sample": {"n": 97, "P4_positive": 83, "P4_negative": 14, "P5_positive": 80},
+    "weighted": {"P4_precision": "7.8", "P5_precision": "8.4", "P4_recall": "66.9", "P5_recall": "66.9"},
+    "gate_a": {"PASS": 45, "FAIL": 47, "UNASSESSABLE": 5},
+    "gate_b": {"PASS": 40, "NO_PRIMARY_IN_ABSTRACT": 53, "FAIL": 4},
+    "gate_c_raw_differences": {"DIFFERS_FROM_PROSPECTIVE": 34, "SUBSTANTIVE_CHANGE": 20, "WORDING_ONLY": 11, "UNCLEAR": 3},
+    "nested_all97": [97, 45, 30, 13, 14, 2],
+    "nested_p4": [83, 32, 17, 7, 8, 2],
+    "identity_attrition": {"did_not_pass_identity": 51, "of": 83},
+    "d_panel": {"n": 30, "reference_material": 3, "reference_nonmaterial": 27, "element_material": 11,
+                "element_nonmaterial": 19, "crosstab": [3, 0, 8, 19]},
+    "g5_completeness": {"cells": 582, "transport": 0, "schema": 36, "semantic": 13, "invalid_total": 49,
+                        "invalid_by_model": {"claude-opus-4.6": 0, "gemini-3.1-pro-preview": 1, "gpt-5.4": 48}},
+    "effects": {
+      "claude-opus-4.6": {"arm1": 80, "arm2": 29, "diff": "+52.6 (41.2-62.9)"},
+      "gemini-3.1-pro-preview": {"arm1": 68, "arm2": 17, "diff": "+52.6 (42.3-62.9)"},
+      "gpt-5.4": {"arm1": 55, "arm2": 7, "diff": "+49.5 (39.2-59.8)"}
+    },
+    "mechanism": {
+      "wrong_paper": {"claude-opus-4.6": "+97.9", "gemini-3.1-pro-preview": "+97.9", "gpt-5.4": "+95.7"},
+      "right_paper": {"claude-opus-4.6": "+2.2", "gemini-3.1-pro-preview": "+2.2", "gpt-5.4": "-2.2"},
+      "strata_n": {"WRONG_PAPER": 47, "RIGHT_PAPER": 45, "UNASSESSABLE": 5}
+    },
+    "coverage": {"claude-opus-4.6": ["88.7", "43.3"], "gemini-3.1-pro-preview": ["85.6", "41.2"], "gpt-5.4": ["64.9", "19.6"]},
+    "wrong_paper_arm2": {"claude-opus-4.6": [6, 1, 40, 0], "gemini-3.1-pro-preview": [6, 1, 39, 1], "gpt-5.4": [4, 0, 36, 7]},
+    "wrong_paper_unassessable_or_invalid": {"claude-opus-4.6": 40, "gemini-3.1-pro-preview": 40, "gpt-5.4": 43}
+  },
+  "sources": {
+    "P4": "claims ledger 'P4 performance'; Table 2",
+    "P5": "claims ledger 'P5 performance'; Table 2",
+    "right_paper": "claims ledger 'Correct-publication subset'; Table 2",
+    "reference": "claims ledger 'Human reference'; Table 1",
+    "sample": "claims ledger 'Reference sampling'; Table 1",
+    "weighted": "claims ledger 'Design-weighted sensitivity'; Table 2 supplement",
+    "gate_a": "claims ledger 'Gate A marginal'; Table 3",
+    "gate_b": "claims ledger 'Gate B marginal'; Table 3",
+    "gate_c_raw_differences": "claims ledger 'Gate C raw differences'; Table 3",
+    "nested_all97": "claims ledger 'All-97 nested cascade'; cascade_denominators.csv",
+    "nested_p4": "claims ledger 'P4-positive nested cascade'; cascade_denominators.csv",
+    "identity_attrition": "claims ledger 'Headline identity attrition'",
+    "d_panel": "claims ledger 'D panel and rubric divergence'; Supplementary Table S3",
+    "g5_completeness": "claims ledger 'Experimental completeness'; Supplementary Table S4A; work order (49 invalid)",
+    "effects": "claims ledger 'Prespecified all-case effects'; g5_primary_effects.csv",
+    "mechanism": "claims ledger 'Mechanism strata'; g5_mechanism_by_human_gate_a.csv",
+    "coverage": "claims ledger 'Determinate coverage'; Supplementary Table S4A",
+    "wrong_paper_arm2": "claims ledger 'Mechanism interpretation'; Supplementary Table S4B",
+    "wrong_paper_unassessable_or_invalid": "claims ledger 'Mechanism interpretation'"
+  }
+}

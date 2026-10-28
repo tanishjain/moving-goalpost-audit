@@ -1,0 +1,65 @@
+{
+  "analysis_family": "author_approved_post_audit",
+  "approved_family_inputs_sha256": {
+    "approved analysis payload": "bc5685c668f39376993fc6de57bb13db7fa10b288db28f926106701d02bea3a8",
+    "author approval record": "b91d644f1a724814b199b88a42a553931c0c7d0edd17f4c43e42fd713d9e8a2b",
+    "overlay proposal": "53c54e7c629f050cbfb2015c1daa8934e4902ad8d6fb7256406ffbda62d3ee2a",
+    "reviewed candidate build": "dc1af8661ef73478",
+    "source flow": "b931bb616cdbb65d54c366f252240c49f0ec172f80bd1e48ec78d20825ad7eb5"
+  },
+  "builder_code_sha256": {
+    "analysis_families.py": "16811526bc93d1f9f903ebde10ba58efcde6ed5b8466e9148ef349f158b7950a",
+    "audit_public_release.py": "d327385bdb1244ce73d7c025f44cfd1dea6e6daeb8c888384f8e2298bcd6812f",
+    "build_display_package.py": "6bb84809974f998f3f37280193614571b55a5dc5e4dfbb727fee12baea292043",
+    "build_public_release.py": "ad652d04ab6cdcfb90993e0c973f999cdc5084d6efc0ae2e4c0666e079f4fca7",
+    "g3_final_package.py": "57608838718af69e06918fe68d2e1e54172162f6e8af97d72cd65ec47fcdc327",
+    "g3_post_review_overlay.py": "b0100bc0d0ed17d31251d63e8fa25e1793728cbe4644db95bc17f1e2601cdee6",
+    "g5_build_release.py": "12622f9789ad131cba7eb8eb45170b35aa95255c4046c3a3f11b1ff7d372c9e7",
+    "source_flow.py": "9750169a74f1210f32267c1ed836cafe34caee6d8ce754c1a0f38844008ee2f7"
+  },
+  "controlling_input_pins": {
+    "data/processed/repro_manifest_latest.json": "1762f94d170baceaeab820eacd40a5b09240e5b1e9a207496f194cf3b98e358b",
+    "data/processed/stage5_final_results.csv": "dddb06f4c2ebbdfffb06b302980ecb3939560e419d2f4b7da2019c0c95ad9340",
+    "data/validation/error_cascade.csv": "c709813d3d38218cf750d190cc5ff78bf21a4877787958d86cfc98a8865cd3dd",
+    "data/validation/error_cascade_month_boundary_panel.json": "0c1414f2a642d3b87e2aa43619fcf26ed19a831d4e99f20c74e2c0b1ae411f39",
+    "data/validation/error_cascade_panels.json": "4b1b01784a49f05a0967925618a7b8d2c2e2b72010a9769e497301a754cd9d20",
+    "data/validation/g2_design_diagnostics.json": "1baa5843ddb028922d3c92c1c0a48957af984e9cba5925d68888a1bc3bd3e404",
+    "data/validation/g2_validation_table.csv": "b939ebbf7efae70944d14567025dc0c93e266b5cedfc396d35e48b6fe30e5d52",
+    "data/validation/g5/g5-reference-20260818-v1/attempts.jsonl": "f832e1272d038798682e4369f625d81127a2e87c90ca457c92d4d95cd6dcf9b1",
+    "data/validation/g5/g5-reference-20260818-v1/completion.json": "b94f8d28e7bd93cd2bc2ef3eee00c7defbe7ad0c361e393acaeab80831c1becf",
+    "data/validation/g5/g5-reference-20260818-v1/g5_analysis.json": "1e53685eb1ede80617cc6845d7909315d432d191bcfb14bef8eb155a981fabd7",
+    "data/validation/g5/g5-reference-20260818-v1/g5_reference_extract.csv": "c393416f2f9cfa6e5d0f162be45de38a682ffe93319cfc3e8fd1db8cf93349b2",
+    "data/validation/g5/g5-reference-20260818-v1/manifest.json": "22f1666781791c713cdc3576e31c86fa4dd2d17c57c4abc16292e0618de8b00d",
+    "data/validation/g5/g5_release/gate_a_and_conditional_d.csv": "a77bf200eed5d5397edf12967a7675cca0bd26e535d7cd3523580294e2441f70",
+    "data/validation/g5/g5_release/mechanism_by_human_gate_a.csv": "3b49fc361bea761426725d4e80bfc6392622225f13a97319e31a55dd625fa7c5",
+    "data/validation/g5/g5_release/primary_effects.csv": "838f745743eae7c7c2b0717d12fcb71f027ecf0bf6c530296b8d36587007bfec",
+    "data/validation/g5/g5_release/status_coverage.csv": "256fb8b586821738d3ed8c156cb2fa528a625788090d161f357715d0b7f34851",
+    "data/validation/g5/g5_release_presentation_r2/CAPTIONS.md": "f1fefe21a94c980604c6542d79ed2f8285324e45489a27bd52c875f48c0bb723",
+    "data/validation/g5/g5_release_presentation_r2/results_manifest.json": "45ba78b3e6d1ee28a35f2c1c75cbba5357085b2b1a3425ecdc6a11b8a7d300b1",
+    "data/validation/g5/g5_release_presentation_r2/wrong_paper_arm2_responses.csv": "66f99312de8e5ba3a380facffc9a9dda3cada08cac12100404d1a149f90a243a",
+    "data/validation/inter_rater_reliability.json": "5c7d29b24f0add9ba92d0d21557bc0ca5c65f65afab777fb0f5fc183207a0f8b",
+    "data/validation/system_validation_vs_human_gold.json": "d9677ff9370c219683a1e43f7f6fe85bee13af340ce6930400a3efa55712d67e",
+    "release/benchmark/g5_cells_source_text_free.csv": "f764862e153884c713fd94b23fc84e0819464b1883e4c15b18d97109699571b0",
+    "release/cascade_denominators.csv": "52e7878f0c9e1f579f7e9836e50635f0c079974e483665f78c26dfbc1751ff19"
+  },
+  "description": "Frozen author-coded cascade with four author-approved post-audit revisions.",
+  "family_version": "1.0.0",
+  "presentation_revision": {
+    "analysis_family": "author_approved_post_audit",
+    "changes": [
+      "Supplementary Table S4B added (Arm-2 responses among the 47 human-reference wrong-paper cases); the existing status/coverage table is relabelled S4A with unchanged values",
+      "G5 explanatory captions use the empirical wrong-paper finding (G5 presentation revision r2)",
+      "S5B approved-family column/caption labels",
+      "public-safe aggregate benchmark/g5_wrong_paper_arm2_responses.csv added to the release"
+    ],
+    "date": "2026-10-04",
+    "family_version": "1.0.0",
+    "g5_presentation": "data/validation/g5/g5_release_presentation_r2",
+    "new_human_coding_approval": false,
+    "presentation_revision": "presentation-r2",
+    "supersedes_approved_run_id": "2f7a8fcfb09e392a",
+    "supersedes_package_manifest_sha256": "b25e60a5429a3fcb87529e1748467ad3492805fb463482aae785470360a67c73",
+    "values_changed": false
+  },
+  "publish_status": "UNPUBLISHED \u2014 curated display package; no tag, deposit, or DOI assigned"
+}

@@ -1,0 +1,10 @@
+**Supplementary Table S4A. Terminal status and determinate coverage by model identifier and arm. All failures were retained and counted as inaccurate. Model identifiers were accessed through GitHub Copilot on 2026-08-18; they are not native-provider models.**
+
+| Model identifier | Arm | n | OK | Schema failure | Semantic failure | Transport failure | Content failures | Determinate coverage |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| claude-opus-4.6 | 1 | 97 | 97 | 0 | 0 | 0 | 0 | 88.7% |
+| claude-opus-4.6 | 2 | 97 | 97 | 0 | 0 | 0 | 0 | 43.3% |
+| gemini-3.1-pro-preview | 1 | 97 | 97 | 0 | 0 | 0 | 0 | 85.6% |
+| gemini-3.1-pro-preview | 2 | 97 | 96 | 1 | 0 | 0 | 1 | 41.2% |
+| gpt-5.4 | 1 | 97 | 76 | 17 | 4 | 0 | 21 | 64.9% |
+| gpt-5.4 | 2 | 97 | 70 | 18 | 9 | 0 | 27 | 19.6% |
