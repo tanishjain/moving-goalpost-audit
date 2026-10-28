@@ -24,7 +24,7 @@
       "bytes": 24392,
       "note": "source-to-export hash map",
       "provenance": "generated",
-      "sha256": "243ce056c8082256de02d48bce60f7bd8728f3bfb681033a81a4b52ecc846fc7"
+      "sha256": "752cf42c7c4059c92d37ef51bf9a99d0e3b49cd4e2fd17222f73646daf517762"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 1741,
@@ -735,14 +735,14 @@
       "sha256": "41ef60e4118a5ad021e4ca136b7228512b8a1a0754ef7d6a55c028b2b8327c2f"
     },
     "tests/test_integrity.py": {
-      "bytes": 3244,
+      "bytes": 3592,
       "provenance": "new",
-      "sha256": "a1b28e73baf7e305533fff8f71e0ade0c14609786704f66529b231a2631deb6f"
+      "sha256": "b36893e36f5acf61739642fc0155d30956b3fb9e476d332e71d4f2f83a71e6e8"
     },
     "tests/test_inventory_and_privacy.py": {
-      "bytes": 4183,
+      "bytes": 4238,
       "provenance": "new",
-      "sha256": "8e1eab6cc4e8fcc5660c43a244b612473e4c629bf3187c2cfb03a6cf5833de7e"
+      "sha256": "e1de7c4866def77cbc71d046fb37cb56e699bda5175bf7a1fe43e2e2ae612b39"
     },
     "tests/test_reproduction.py": {
       "bytes": 1972,

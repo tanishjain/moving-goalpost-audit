@@ -42,7 +42,8 @@ SELF = "tests/test_inventory_and_privacy.py"
 
 def _files():
     return {p.relative_to(ROOT).as_posix(): p for p in ROOT.rglob("*")
-            if p.is_file() and not ({"__pycache__", ".pytest_cache", ".venv", "reproduction_output"}
+            if p.is_file() and p.relative_to(ROOT).parts[0] != ".git"
+            and not ({"__pycache__", ".pytest_cache", ".venv", "reproduction_output"}
                                     & set(p.relative_to(ROOT).parts))}
 
 

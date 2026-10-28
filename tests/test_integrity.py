@@ -58,7 +58,9 @@ def test_manifest_records_explicit_provenance_for_every_file():
 
 
 @pytest.mark.parametrize("kind", ["directory", "file"])
-def test_root_git_metadata_is_not_snapshot_content(tmp_path, kind):
+def test_root_git_metadata_is_not_snapshot_content(tmp_path, kind, monkeypatch):
+    import test_inventory_and_privacy as inventory
+    monkeypatch.setattr(inventory, "ROOT", tmp_path)
     (tmp_path / "EXPORT_MANIFEST.json").write_text(json.dumps({"files": {}}))
     git = tmp_path / ".git"
     if kind == "directory":
@@ -67,11 +69,15 @@ def test_root_git_metadata_is_not_snapshot_content(tmp_path, kind):
     else:
         git.write_text("gitdir: ../administrative-directory\n")
     assert vs.verify(tmp_path) == []
+    assert set(inventory._files()) == {"EXPORT_MANIFEST.json"}
 
 
-def test_nested_git_content_is_still_unlisted(tmp_path):
+def test_nested_git_content_is_still_unlisted(tmp_path, monkeypatch):
+    import test_inventory_and_privacy as inventory
+    monkeypatch.setattr(inventory, "ROOT", tmp_path)
     (tmp_path / "EXPORT_MANIFEST.json").write_text(json.dumps({"files": {}}))
     nested = tmp_path / "data" / ".git"
     nested.mkdir(parents=True)
     (nested / "extra").write_text("unexpected snapshot content")
     assert "unlisted file: data/.git/extra" in vs.verify(tmp_path)
+    assert "data/.git/extra" in inventory._files()
